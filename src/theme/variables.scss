@@ -1,0 +1,25 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+:root {
+	--ion-color-red: #fe101c;
+	--ion-color-red-rgb: 254,16,28;
+	--ion-color-red-contrast: #000000;
+	--ion-color-red-contrast-rgb: 0,0,0;
+	--ion-color-red-shade: #e00e19;
+	--ion-color-red-tint: #fe2833;
+}
+
+.ion-color-red {
+	--ion-color-base: var(--ion-color-red);
+	--ion-color-base-rgb: var(--ion-color-red-rgb);
+	--ion-color-contrast: var(--ion-color-red-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-red-contrast-rgb);
+	--ion-color-shade: var(--ion-color-red-shade);
+	--ion-color-tint: var(--ion-color-red-tint);
+}
+
+// @import url(https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap);
+// $font-family-base: "Chakra Petch", sans-serif !default;
+// $font-family-ios-base: 'Chakra Petch';
+// $font-family-md-base: 'Chakra Petch';
+// $font-family-wp-base: 'Chakra Petch';

@@ -1,0 +1,32 @@
+<ion-content>
+
+
+  <ion-grid>
+    <div class="image-login">
+      <img src="../../assets/img/logo_.png" alt="" width="220px">
+    </div>
+    <div class="text-login">
+      <h1>เข้าสู่ระบบ</h1>
+    </div>
+    <ion-row class="content-login">
+      <ion-col size="12" size-md="8">
+        <form (ngSubmit)="login()">
+          <ion-item class="user">
+            <ion-icon color="dark" name="person-circle-outline"></ion-icon>&nbsp;&nbsp;<p style="font-weight: bold;">:
+            </p>&nbsp;&nbsp;&nbsp;
+            <ion-input [(ngModel)]="username" name="username" placeholder="กรอกชื่อผู้ใช้" required></ion-input>
+          </ion-item>
+          <ion-item class="password">
+            <ion-icon color="dark" name="lock-closed-outline"></ion-icon>&nbsp;&nbsp;<p style="font-weight: bold;">:</p>
+            &nbsp;&nbsp;&nbsp;
+            <ion-input [(ngModel)]="password" name="password" type="password" placeholder="กรอกรหัสผ่าน"
+              required></ion-input>
+          </ion-item>
+          <div class="button-login">
+            <ion-button type="submit">ล็อกอิน</ion-button>
+          </div>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

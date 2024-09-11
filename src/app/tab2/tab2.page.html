@@ -1,0 +1,52 @@
+<ion-header [translucent]="true" style="text-align: center;">
+  <ion-toolbar color="danger">
+    <ion-title>
+      แก้ไขสินค้า
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card color="medium" style="width: auto; height: auto;" class="ion-padding">
+    <div class="button-type">
+      <ion-button (click)="selectImage()">แก้ไขรูปภาพ</ion-button>
+
+      <div *ngIf="image">
+        <ion-img [src]="image"></ion-img>
+      </div>
+    </div>
+    <br>
+    <ion-item>
+      <ion-input label="กรอกชื่อสินค้า"></ion-input>
+    </ion-item><br>
+    <ion-item>
+      <ion-input label="กรอกรหัสสินค้่า"></ion-input>
+    </ion-item><br>
+    <ion-item>
+      <ion-input label="กรอกจำนวนสินค้า"></ion-input>
+    </ion-item><br>
+    <ion-item>
+      <ion-input label="กรอกราคาสินค้า"></ion-input>
+    </ion-item><br>
+      <ion-list>
+        <ion-item>
+          <ion-select aria-label="fruit" placeholder="ประเภทสินค้าที่ต้องการเพิ่ม">
+            <ion-select-option value="น้ำมันเครื่อง">น้ำมันเครื่อง</ion-select-option>
+            <ion-select-option value="อุปกรณ์ตกแต่ง">อุปกรณ์ตกแต่ง</ion-select-option>
+            <ion-select-option value="แบตเตอร์รี่">แบตเตอร์รี่</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list><br>
+    <div class="bunton-save-cancel">
+      <ion-button color="primary"  (click)="confirmSave()">
+        บันทึก
+      </ion-button>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <ion-button color="danger" (click)="confirmCancle()">ยกเลิก</ion-button>
+    </div>
+  </ion-card>
+</ion-content>

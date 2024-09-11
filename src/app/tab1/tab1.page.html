@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="red">
+    <ion-title class="title" color="light">สินค้าภายในร้าน</ion-title>
+    <ion-buttons slot="end">
+      <ion-button class="logout" color="light" (click)="logout()">
+        <h6>ออก</h6>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="searchProducts()" color="primary" placeholder="กรอกรหัสสินค้า">
+  </ion-searchbar>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" color="primary" (click)="filterCategory('น้ำมันเครื่อง')">น้ำมันเครื่อง</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" color="primary" (click)="filterCategory('อุปกรณ์ตกแต่ง')">อุปกรณ์ตกแต่ง</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" color="primary" (click)="filterCategory('แบตเตอร์รี่')">แบตเตอร์รี่</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid><br>
+
+  <ion-card>
+    <ion-item *ngFor="let product of filteredProducts">
+      <ion-label>
+        <div class="content-product">
+          <div class="image-product">
+            <img [src]="product.url" alt="">
+          </div>
+          <div class="menu-product">
+            <p class="name">{{ product.name }}</p>
+            <p style="color: rgb(255, 255, 22);"> {{ product.primary }} </p>
+            <div class="stock-product-buttom">
+              <p class="name">จำนวนสินค้า : {{ product.stock }}</p>
+              <p class="name">ราคา : {{ product.price }} บาท</p>
+            </div>
+          </div>
+        </div>
+        <ion-row class="button-product">
+          <ion-col size="3">
+            <ion-button class="edit" expand="block" (click)="fix()">
+              <p>แก้ไข</p>
+            </ion-button>
+          </ion-col>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ion-col size="3" class="sale">
+            <ion-button color="primary" expand="block" (click)="sellItem(product)">
+              ขาย
+            </ion-button>
+          </ion-col>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ion-col size="3">
+            <ion-button color="danger" expand="block" (click)="confirmDelete(product)">
+              ลบ
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+</ion-content>
+  
