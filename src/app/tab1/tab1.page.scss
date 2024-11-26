@@ -4,37 +4,64 @@
   box-sizing: border-box;
 }
 
+
 .title {
-  padding-left: 140px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  border: 1px solid blue;
+  background-color: red;
 }
 
-.logout {
-  background-color: orange;
-  border-radius: 5px;
-  text-align: center;
-  margin-right: 20px;
-  padding: 0 5px;
-}
 
 ion-searchbar {
   --border-radius: 10px;
 }
 
-ion-item {
-  // border: 2px solid red;
-  margin-bottom: 15px;
+.header-type {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  border-radius: 10px;
+  background-color: rgb(233, 233, 233);
+  border: 1px solid black;
 }
 
-ion-label {
+.logout {
   display: flex;
-  background-color: rgb(136, 135, 135);
-  padding: 10px 15px;
-  border-radius: 5px;
+  --background: #ffffff;
+  width: 100%;
+  border-radius: 0px;
+  color: black;
+  border-top: 1.5px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.3);
 }
+
+.type-button {
+  max-width: 290px;
+  border-radius: 10px;
+  display: flex;
+  margin: 5px 0px 15px 15px;
+}
+
+.menu-label ion-label {
+  --display: flex;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1.5px solid black;
+  
+  p {
+    color: black;
+  }
+}
+
 
 .content-product {
   display: flex;
-  padding-top: 5px;
 }
 
 .menu-product {
@@ -79,4 +106,9 @@ ion-label {
 
 ion-button.edit {
   --background: rgb(255, 190, 13);
+}
+
+.center-o ion-button{
+  width: 140px;
+  text-align: center;
 }

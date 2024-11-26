@@ -1,5 +1,5 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="red">
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
     <ion-title class="title" color="light">สินค้าภายในร้าน</ion-title>
     <ion-buttons slot="end">
       <ion-button class="logout" color="light" (click)="logout()">
@@ -7,27 +7,44 @@
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
+
+<div id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>สินค้าภายในร้าน</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</div>
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>เมนูร้านค้า</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-button class="logout" (click)="logout()">
+    <h6>ออกจากระบบ</h6>
+  </ion-button>
+</ion-menu>
+
 
 <ion-content>
   <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="searchProducts()" color="primary" placeholder="กรอกรหัสสินค้า">
   </ion-searchbar>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-button expand="block" color="primary" (click)="filterCategory('น้ำมันเครื่อง')">น้ำมันเครื่อง</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button expand="block" color="primary" (click)="filterCategory('อุปกรณ์ตกแต่ง')">อุปกรณ์ตกแต่ง</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button expand="block" color="primary" (click)="filterCategory('แบตเตอร์รี่')">แบตเตอร์รี่</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid><br>
+  <ion-card class="type-button">
+    <ion-label class="header-type">เลือกประเภทสินค้า</ion-label>
+    <ion-select placeholder="น้ำมันเครื่อง" (ionChange)="Category($event.detail.value)">
+      <ion-select-option value="น้ำมันเครื่อง">น้ำมันเครื่อง</ion-select-option>
+      <ion-select-option value="อุปกรณ์ตกแต่ง">อุปกรณ์ตกแต่ง</ion-select-option>
+      <ion-select-option value="แบตเตอร์รี่">แบตเตอร์รี่</ion-select-option>
+    </ion-select>
+  </ion-card>
 
   <ion-card>
-    <ion-item *ngFor="let product of filteredProducts">
+    <ion-item class="menu-label" *ngFor="let product of filteredProducts">
       <ion-label>
         <div class="content-product">
           <div class="image-product">
@@ -35,7 +52,7 @@
           </div>
           <div class="menu-product">
             <p class="name">{{ product.name }}</p>
-            <p style="color: rgb(255, 255, 22);"> {{ product.primary }} </p>
+            <p style="color: rgb(255, 0, 0);"> {{ product.primary }} </p>
             <div class="stock-product-buttom">
               <p class="name">จำนวนสินค้า : {{ product.stock }}</p>
               <p class="name">ราคา : {{ product.price }} บาท</p>
@@ -50,12 +67,12 @@
           </ion-col>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <ion-col size="3" class="sale">
             <ion-button color="primary" expand="block" (click)="sellItem(product)">
-              ขาย
+              <p>ขาย</p>
             </ion-button>
           </ion-col>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <ion-col size="3">
             <ion-button color="danger" expand="block" (click)="confirmDelete(product)">
-              ลบ
+              <p>ลบ</p>
             </ion-button>
           </ion-col>
         </ion-row>
@@ -63,4 +80,3 @@
     </ion-item>
   </ion-card>
 </ion-content>
-  

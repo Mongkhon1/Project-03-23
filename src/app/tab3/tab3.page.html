@@ -1,6 +1,6 @@
 <ion-header [translucent]="true" style="text-align: center;">
-  <ion-toolbar color="danger">
-    <ion-title>
+  <ion-toolbar color="red">
+    <ion-title color="light">
       เพิ่มสินค้า
     </ion-title>
   </ion-toolbar>
@@ -10,7 +10,6 @@
   <ion-card color="medium" style="width: auto; height: auto;" class="ion-padding">
     <div class="button-type">
       <ion-button (click)="selectImage()">เพิ่มรูปภาพ</ion-button>
-
       <div *ngIf="image">
         <ion-img [src]="image"></ion-img>
       </div>
@@ -21,26 +20,24 @@
     &nbsp;
     &nbsp;
     <ion-item>
-      <ion-input label="กรอกชื่อสินค้า"></ion-input>
+      <ion-input label="กรอกชื่อสินค้า :"></ion-input>
     </ion-item><br>
     <ion-item>
-      <ion-input label="กรอกรหัสสินค้่า"></ion-input>
+      <ion-input label="กรอกรหัสสินค้า :"></ion-input>
     </ion-item><br>
     <ion-item>
-      <ion-input label="กรอกจำนวนสินค้า"></ion-input>
+      <ion-input label="กรอกจำนวนสินค้า :"></ion-input>
     </ion-item><br>
     <ion-item>
-      <ion-input label="กรอกราคาสินค้า"></ion-input>
+      <ion-input label="กรอกราคาสินค้า :"></ion-input>
     </ion-item><br>
-    <ion-list>
       <ion-item>
         <ion-select aria-label="fruit" placeholder="ประเภทสินค้าที่ต้องการเพิ่ม">
           <ion-select-option value="apples">น้ำมันเครื่อง</ion-select-option>
-          <ion-select-option value="oranges">แบตเตอร์รี่</ion-select-option>
-          <ion-select-option value="bananas">อุปกรณ์ตกแต่ง</ion-select-option>
+          <ion-select-option value="oranges">อุปกรณ์ตกแต่ง</ion-select-option>
+          <ion-select-option value="bananas">แบตเตอร์รี่</ion-select-option>
         </ion-select>
-      </ion-item>
-    </ion-list><br>
+      </ion-item><br>
     <div class="bunton-save-cancel">
       <ion-button color="primary" (click)="confirmSave()">บันทึก</ion-button>
       &nbsp;

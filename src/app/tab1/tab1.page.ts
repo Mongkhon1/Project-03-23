@@ -17,7 +17,7 @@ export class Tab1Page {
     { name: 'YSS โช๊คอัพหลัง DTG GAS HYBRID', stock: 20, price: 2400, category: 'อุปกรณ์ตกแต่ง', primary: 336706, url: 'assets/img/อุปกรณ์แต่ง/YSS โช๊คอัพหลัง DTG GAS HYBRID ราคา 2400 บาท.png', },
     { name: 'กันล้ม CNC', stock: 29, price: 1500, category: 'อุปกรณ์ตกแต่ง', primary: 336707, url: 'assets/img/อุปกรณ์แต่ง/กันล้ม CNC ราคา 1,500 บาท.png', },
     { name: 'ข้อต่อโซ่ JOMTHAI เบอร์ 525 ASMX', stock: 80, price: 1150, category: 'อุปกรณ์ตกแต่ง', primary: 336708, url: 'assets/img/อุปกรณ์แต่ง/ข้อต่อโซ่ JOMTHAI เบอร์ 525 ASMX ราคา 1,150 บาท.png', },
-    { name: 'ชุดปลอกแฮนด์มือจับยาง 22 มม. สไตล์เรโทร', stock: 69, price: 400, category: 'อุปกรณ์ตกแต่ง', primary: 336709, url: 'assets/img/อุปกรณ์แต่ง/ชุดปลอกแฮนด์มือจับยาง 22 มม. สไตล์เรโทร ราคา 400 บาท.png', },
+    { name: 'ชุดปลอกแฮนด์มือจับยาง', stock: 69, price: 400, category: 'อุปกรณ์ตกแต่ง', primary: 336709, url: 'assets/img/อุปกรณ์แต่ง/ชุดปลอกแฮนด์มือจับยาง 22 มม. สไตล์เรโทร ราคา 400 บาท.png', },
     { name: 'โซ๊คอัพ OHLINS YA 218', stock: 12, price: 27300, category: 'อุปกรณ์ตกแต่ง', primary: 336710, url: 'assets/img/อุปกรณ์แต่ง/โซ๊คอัพ OHLINS YA 218 ราคา 27,300 บาท.png', },
     { name: 'แตร Pos', stock: 25, price: 1400, category: 'อุปกรณ์ตกแต่ง', primary: 336711, url: 'assets/img/อุปกรณ์แต่ง/แตร Posh ราคา 1,400 บาท.png', },
     { name: 'ท่อ Super trapp', stock: 18, price: 7500, category: 'อุปกรณ์ตกแต่ง', primary: 336712, url: 'assets/img/อุปกรณ์แต่ง/ท่อ Super trapp ราคา 7,500 บาท.png', },
@@ -42,10 +42,6 @@ export class Tab1Page {
 
   fix() {
     this.navCtrl.navigateForward('/tabs/tab2');
-  }
-
-  filterCategory(category: string) {
-    this.filteredProducts = this.products.filter(product => product.category === category);
   }
 
   searchProducts() {
@@ -99,5 +95,10 @@ export class Tab1Page {
       console.log('Product deleted:', product);
     }
   }
+
+  Category(category: string) {
+    this.filteredProducts = this.products.filter(product => product.category === category);
+  }
+
 }
 

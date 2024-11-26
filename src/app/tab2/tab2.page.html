@@ -1,6 +1,6 @@
 <ion-header [translucent]="true" style="text-align: center;">
-  <ion-toolbar color="danger">
-    <ion-title>
+  <ion-toolbar color="red">
+    <ion-title color="light">
       แก้ไขสินค้า
     </ion-title>
   </ion-toolbar>
@@ -17,28 +17,26 @@
     </div>
     <br>
     <ion-item>
-      <ion-input label="กรอกชื่อสินค้า"></ion-input>
+      <ion-input label="กรอกชื่อสินค้า :"></ion-input>
     </ion-item><br>
     <ion-item>
-      <ion-input label="กรอกรหัสสินค้่า"></ion-input>
+      <ion-input label="กรอกรหัสสินค้า :"></ion-input>
     </ion-item><br>
     <ion-item>
-      <ion-input label="กรอกจำนวนสินค้า"></ion-input>
+      <ion-input label="กรอกจำนวนสินค้า :"></ion-input>
     </ion-item><br>
     <ion-item>
-      <ion-input label="กรอกราคาสินค้า"></ion-input>
+      <ion-input label="กรอกราคาสินค้า :"></ion-input>
     </ion-item><br>
-      <ion-list>
-        <ion-item>
-          <ion-select aria-label="fruit" placeholder="ประเภทสินค้าที่ต้องการเพิ่ม">
-            <ion-select-option value="น้ำมันเครื่อง">น้ำมันเครื่อง</ion-select-option>
-            <ion-select-option value="อุปกรณ์ตกแต่ง">อุปกรณ์ตกแต่ง</ion-select-option>
-            <ion-select-option value="แบตเตอร์รี่">แบตเตอร์รี่</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-list><br>
+    <ion-item>
+      <ion-select aria-label="fruit" placeholder="ประเภทสินค้าที่ต้องการเพิ่ม">
+        <ion-select-option value="น้ำมันเครื่อง">น้ำมันเครื่อง</ion-select-option>
+        <ion-select-option value="อุปกรณ์ตกแต่ง">อุปกรณ์ตกแต่ง</ion-select-option>
+        <ion-select-option value="แบตเตอร์รี่">แบตเตอร์รี่</ion-select-option>
+      </ion-select>
+    </ion-item><br>
     <div class="bunton-save-cancel">
-      <ion-button color="primary"  (click)="confirmSave()">
+      <ion-button color="primary" (click)="confirmSave()">
         บันทึก
       </ion-button>
       &nbsp;

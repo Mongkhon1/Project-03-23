@@ -1,7 +1,7 @@
 <ion-header [translucent]="true" style="text-align: center;">
-  <ion-toolbar color="danger">
-    <ion-title>
-      ประเภทสินค้่า
+  <ion-toolbar color="red">
+    <ion-title color="light">
+      ประเภทสินค้า  
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,17 +9,8 @@
 <ion-content [fullscreen]="true">
   <ion-card color="medium" style="width: auto; height: auto;" class="ion-padding">
     <ion-item>
-      <ion-input label="น้ำมันเครื่อง"></ion-input>
-    </ion-item><br>
-    <ion-item>
-      <ion-input label="แบตเตอรี่"></ion-input>
-    </ion-item><br>
-    <ion-item>
-      <ion-input label="เครื่องแต่ง"></ion-input>
-    </ion-item><br>
-    <div class="button-type">
-      <ion-button color="primary"><ion-icon name="add-circle"></ion-icon>เพิ่มประเภทสินค้า</ion-button>
-    </div>
+      <ion-input label="กรอกชื่อประเภทสินค้า :"></ion-input>
+    </ion-item>
     <div class="bunton-save-cancel">
       <ion-button color="primary" (click)="confirmSave()">บันทึก</ion-button>
       &nbsp;

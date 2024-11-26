@@ -18,6 +18,24 @@
 	--ion-color-tint: var(--ion-color-red-tint);
 }
 
+:root {
+	--ion-color-purple: #ae5fd3;
+	--ion-color-purple-rgb: 174,95,211;
+	--ion-color-purple-contrast: #000000;
+	--ion-color-purple-contrast-rgb: 0,0,0;
+	--ion-color-purple-shade: #9954ba;
+	--ion-color-purple-tint: #b66fd7;
+}
+
+.ion-color-purple {
+	--ion-color-base: var(--ion-color-purple);
+	--ion-color-base-rgb: var(--ion-color-purple-rgb);
+	--ion-color-contrast: var(--ion-color-purple-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-purple-contrast-rgb);
+	--ion-color-shade: var(--ion-color-purple-shade);
+	--ion-color-tint: var(--ion-color-purple-tint);
+}
+
 // @import url(https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap);
 // $font-family-base: "Chakra Petch", sans-serif !default;
 // $font-family-ios-base: 'Chakra Petch';
